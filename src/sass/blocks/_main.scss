@@ -1,0 +1,18 @@
+.main {
+    min-height: 670px;
+    background: url('../img/backgroundimage.png') no-repeat center / cover;
+    padding-bottom: 80px;
+    &__wrapper {
+        min-height: 670px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 30px;
+        
+        
+    }
+    &__title {
+        font-size: 60px;
+        font-style: italic;
+    }
+}

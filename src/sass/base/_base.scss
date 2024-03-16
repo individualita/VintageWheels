@@ -1,0 +1,20 @@
+body {
+    background-color: var(--page-bg);
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}

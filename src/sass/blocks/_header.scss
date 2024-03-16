@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    background: linear-gradient(279deg, rgba(255,249,231,1) 0%, rgba(255,249,231,0.6839985994397759) 54%, rgba(255,249,231,0) 99%);
+    font-family: var(--font-nav);
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__list {
+        display: flex;
+        gap: 55px;
+    }
+    &__item {
+
+    }
+    &__link {
+        color: #000;
+        font-weight: 600;
+    }
+}
