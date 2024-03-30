@@ -1,0 +1,31 @@
+.about {
+    padding: 100px 0;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__description {
+        width: 535px;
+        padding-top: 60px;
+    }
+    &__text {
+        margin-top: 40px;
+    }
+    &__images {
+        display: flex;
+        gap: 30px;
+    }
+    &__image {
+        width: 250px;
+    }
+    &__grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        &-img {
+            width: 100%;
+            height: 200px;
+        }
+    }
+}
