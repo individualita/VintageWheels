@@ -1,0 +1,43 @@
+.reviews {
+    padding: 100px 0 100px;
+    &__title {
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        padding: 15px;
+        width: 350px;
+        border: 2px solid var(--second-color);
+        border-radius: 5px;
+    }
+    &__rating {
+        padding: 15px;
+        display: flex;
+        gap: 5px;
+        border-bottom: 1px solid var(--second-color);
+    }
+    &__client {
+        display: flex;
+        align-items: flex-end;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    &__img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    &__text {
+        margin-top: 30px;
+    }
+}
