@@ -1,0 +1,45 @@
+.footer {
+    padding: 50px 0 30px;
+    background-color: var(--second-color);
+    &__main {
+        display: flex;
+        gap: 215px;
+    }
+    &__info {
+        width: 345px;
+    }
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    &__description {
+        margin-top: 30px;
+    }
+    &__menu {
+        display: flex;
+        gap: 130px;
+        &-title {
+            margin-bottom: 40px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        &-item {
+            margin-top: 15px;
+        }
+        &-link {
+            color: #000;
+            &:hover {
+                color: var(--first-color);
+            }
+        }
+    }
+    &__bottom {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social {
+        display: flex;
+        gap: 15px;
+    }
+}
