@@ -1,0 +1,29 @@
+.gallery {
+    &__title {
+        text-align: center;
+    }
+    &__wrapper {
+        position: relative;
+        margin-top: 30px;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+    &__btn {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        width: 60px;
+        svg {
+            fill: var(--first-color);
+        }
+        &-prev {
+            left: 10px;
+        }
+        &-next {
+            right: 10px;
+        }
+        
+    }
+}

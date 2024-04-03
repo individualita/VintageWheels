@@ -1,5 +1,5 @@
 .collection {
-    padding-top: 100px;
+    padding: 100px 0 100px;
     &__title {
         text-align: center;
     }
@@ -40,9 +40,7 @@
     }
     &__description {
         width: 640px;
-    }
-    &__button {
-
+        font-weight: 500;
     }
     &__content {
         overflow: hidden;
