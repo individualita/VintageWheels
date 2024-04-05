@@ -12,3 +12,23 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.gallery__btn-prev',
     },
   });
+
+
+  const navLinks = document.querySelectorAll('.nav__link');
+
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', scrollToSection);
+  });
+
+  function scrollToSection(e) {
+
+    e.preventDefault();
+    const target = e.currentTarget; //либо this
+    
+    const href = target.getAttribute('href');
+
+    const section = document.querySelector(href).offsetTop;
+    
+    window.scrollTo({top: section, behavior: 'smooth'});
+
+  };
