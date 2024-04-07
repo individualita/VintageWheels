@@ -11,24 +11,59 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.gallery__btn-next',
       prevEl: '.gallery__btn-prev',
     },
-  });
+});
 
 
-  const navLinks = document.querySelectorAll('.nav__link');
+const classes = {
+  opened: 'opened',
+};
 
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', scrollToSection);
-  });
+const navLinks = document.querySelectorAll('.nav__link');
+const collectionItem = document.querySelectorAll('.collection__item');
 
-  function scrollToSection(e) {
-
-    e.preventDefault();
-    const target = e.currentTarget; //либо this
+function scrollToSection(e) {
+  e.preventDefault();
+  const currentTarget = e.currentTarget; //либо this
+  const href = currentTarget.getAttribute('href');
+  const section = document.querySelector(href).offsetTop;
+  if (!href || !href.startsWith('#')) {
+    return;
+  }
     
-    const href = target.getAttribute('href');
+  window.scrollTo({top: section, behavior: 'smooth'});
 
-    const section = document.querySelector(href).offsetTop;
-    
-    window.scrollTo({top: section, behavior: 'smooth'});
+};
 
-  };
+function toggleAccordeon() {
+  const isOpened = this.classList.contains(classes.opened);
+
+  if (!isOpened) {
+    collectionItem.forEach(function(otherItem) {
+      otherItem.classList.remove(classes.opened);
+    })
+    this.classList.add(classes.opened);
+  } else {
+    this.classList.remove(classes.opened);
+  }
+}
+
+
+
+navLinks.forEach(function(link) {
+  link.addEventListener('click', scrollToSection);
+});
+
+collectionItem.forEach(function(item) {
+  item.addEventListener('click', toggleAccordeon)
+});
+
+
+
+
+
+
+
+
+
+
+
