@@ -48,6 +48,7 @@ function toggleAccordeon() {
 
 const navLinks = document.querySelectorAll('.nav__link');
 const collectionItem = document.querySelectorAll('.collection__item');
+const footerLinks = document.querySelectorAll('.footer__menu-link');
 
 navLinks.forEach(function(link) {
   link.addEventListener('click', scrollToSection);
@@ -56,6 +57,11 @@ navLinks.forEach(function(link) {
 collectionItem.forEach(function(item) {
   item.addEventListener('click', toggleAccordeon)
 });
+
+footerLinks.forEach(function(link) {
+  link.addEventListener('click', scrollToSection);
+});
+
 
 
 
