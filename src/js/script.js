@@ -18,8 +18,6 @@ const classes = {
   opened: 'opened',
 };
 
-const navLinks = document.querySelectorAll('.nav__link');
-const collectionItem = document.querySelectorAll('.collection__item');
 
 function scrollToSection(e) {
   e.preventDefault();
@@ -48,6 +46,8 @@ function toggleAccordeon() {
 }
 
 
+const navLinks = document.querySelectorAll('.nav__link');
+const collectionItem = document.querySelectorAll('.collection__item');
 
 navLinks.forEach(function(link) {
   link.addEventListener('click', scrollToSection);
