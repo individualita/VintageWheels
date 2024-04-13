@@ -67,15 +67,55 @@
             </div>
         </div>
     </section>
-    <section class="price" id="price">
+    <section class="booking" id="booking">
         <div class="container">
-            <div class="price__wrapper">
-                <h3 class="price__title">Special price for the first rental <span class="price__subtitle">-5%</span></h3>
-                <form class="price__form" action="#" >
-                    <input class="price__email" type="email" placeholder="name@email.com">
-                    <button class="price__button" type="submit">join</button>
-                </form>
-            </div>
+            <form class="booking__form" aria-label="booking form">
+                <div class="booking__form-group">
+                    <div class="booking__input-group">
+                        <label for="city" class="booking__label">Choose city:</label>
+                        <select id="city" class="booking__select" name="city" aria-label="city choose">
+                          <!-- Варианты городов -->
+                          <option value="city1">Warsaw</option>
+                          <option value="city2">Gdańsk</option>
+                          <option value="city3">Wrocław</option>
+                          <option value="city4">Kraków</option>
+                        </select>
+                      </div>
+                  
+                      <div class="booking__input-group">
+                          <label for="car" class="booking__label">Choose car:</label>
+                          <select id="car" name="car" class="booking__select" aria-label="car choose">
+                            <!-- Варианты машин -->
+                            <option value="car1">Volga GAZ-21</option>
+                            <option value="car2">Volga Pobeda M20</option>
+                            <option value="car3">Moskvich 407</option>
+                          </select>
+                      </div>
+                </div>
+                <div class="booking__form-group">
+                    <div class="booking__input-group">
+                        <label for="startDate" class="booking__label">Pick up date:</label>
+                        <input class="booking__input" type="date" id="startDate" name="startDate" aria-label="select start date of rental">
+                      </div>
+                  
+                      <div class="booking__input-group">
+                        <label for="startTime" class="booking__label">Pick up time</label>
+                        <input class="booking__input" type="time" id="startTime" name="startTime"  aria-label="select start time of rental">
+                      </div>
+                  
+                      <div class="booking__input-group">
+                        <label for="endDate" class="booking__label">End date:</label>
+                        <input class="booking__input" type="date" id="endDate" name="endDate" aria-label="select end date of rental">
+                      </div>
+                  
+                      <div class="booking__input-group">
+                        <label for="endTime" class="booking__label">End time:</label>
+                        <input class="booking__input"  type="time" id="endTime" name="endTime" aria-label="select end time of rental">
+                      </div>
+                  
+                      <button class="button booking__button" type="submit" aria-label="accept choose">Choose</button>
+                </div>
+            </form>
         </div>
     </section>
     <section class="collection" id="collection">
@@ -198,6 +238,17 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+    <section class="price" id="price">
+        <div class="container">
+            <div class="price__wrapper">
+                <h3 class="price__title">Special price for the first rental <span class="price__subtitle">-5%</span></h3>
+                <form class="price__form" action="#" >
+                    <input class="price__email" type="email" placeholder="name@email.com">
+                    <button class="price__button" type="submit">join</button>
+                </form>
             </div>
         </div>
     </section>

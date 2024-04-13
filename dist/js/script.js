@@ -49,6 +49,11 @@ function toggleAccordeon() {
 const navLinks = document.querySelectorAll('.nav__link');
 const collectionItem = document.querySelectorAll('.collection__item');
 const footerLinks = document.querySelectorAll('.footer__menu-link');
+const aboutSection = document.querySelector('.about');
+const aboutImages = document.querySelectorAll('[data-image-overlay]');
+
+const overlay = document.querySelector('.overlay');
+const overlayImage = document.querySelector('.overlay-img');
 
 navLinks.forEach(function(link) {
   link.addEventListener('click', scrollToSection);
@@ -64,11 +69,7 @@ footerLinks.forEach(function(link) {
 
 
 
-const aboutSection = document.querySelector('.about');
-const aboutImages = document.querySelectorAll('[data-image-overlay]');
 
-const overlay = document.querySelector('.overlay');
-const overlayImage = document.querySelector('.overlay-img');
 
 aboutSection.addEventListener('click', function(e) {
   const currentTarget = e.target;
