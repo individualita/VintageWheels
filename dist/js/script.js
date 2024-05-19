@@ -16,9 +16,13 @@ const swiper = new Swiper('.swiper', {
 
 
 
-function scrollToSection(e) {
-  e.preventDefault();
-  const currentTarget = e.currentTarget; //либо this
+//-------------------------------------------------- Functions 
+
+
+
+function scrollToSection(event) {
+  event.preventDefault();
+  const currentTarget = event.currentTarget; 
   const href = currentTarget.getAttribute('href');
   const section = document.querySelector(href).offsetTop;
   if (!href || !href.startsWith('#')) {
@@ -40,24 +44,74 @@ function toggleAccordeon() {
   } else {
     this.classList.remove(classes.opened);
   }
-}
+};
 
-function showImage (e) {
+function displayOverlayImage (event) {
 
-  const currentTarget = e.target;
+  const currentTarget = event.target;
 
   if (currentTarget.hasAttribute('data-image-overlay')) {
     overlayImage.src = currentTarget.src;
     overlay.classList.add(classes.opened);
-    //убираем пролистывание страницы
+    //Removing page scrolling.
     document.body.style.overflow = 'hidden';
   }
-}
+};
+function closeOverlay(event) {
+  if(event.target === this ) {
+    overlay.classList.remove(classes.opened);
+    document.body.style.overflow = '';
+  }
+};
+
+function closeModal(event) {
+  if (event.target.classList.contains('modal__close')) {
+    modal.classList.remove(classes.opened);
+    document.body.style.overflow = '';
+  }
+};
+
+
+function openReservationModal(event) {
+  event.preventDefault();
+
+  //set values from  the form
+  const city = document.getElementById('city').value;
+  const car = document.getElementById('car').value;
+  const pickUpDate = document.getElementById('startdate').value;
+  const pickUpTime = document.getElementById('starttime').value;
+  const endDate = document.getElementById('enddate').value;
+  const endTime = document.getElementById('endtime').value;
+
+  const reservationError = document.querySelector('.booking__error');
+
+  if(!city || !car || !pickUpDate || !pickUpTime || !endDate || !endTime) {
+    reservationError.style.display = 'block';
+    return;
+  }
+  reservationError.style.display = 'none';
+  //set values in the modal 
+  document.querySelector('[data-city]').value = city;
+  document.querySelector('[data-car]').value = car;
+  document.querySelector('[data-startdate]').value = pickUpDate;
+  document.querySelector('[data-starttime]').value = pickUpTime;
+  document.querySelector('[data-enddate]').value = endDate;
+  document.querySelector('[data-endtime]').value = endTime;
+
+  modal.classList.add(classes.opened);
+  document.body.style.overflow = 'hidden';
+
+};
+
+
+
+
+
+//-------------------------------------------------- Constants 
 
 const classes = {
   opened: 'opened',
 };
-
 
 const navLinks = document.querySelectorAll('.nav__link');
 const collectionItem = document.querySelectorAll('.collection__item');
@@ -67,9 +121,13 @@ const aboutImages = document.querySelectorAll('[data-image-overlay]');
 
 const overlay = document.querySelector('.overlay');
 const overlayImage = document.querySelector('.overlay-img');
-const modal = overlay.querySelector('.modal');
+const modal = document.querySelector('.modal');
+const openModalBtn = document.querySelector('[data-openmodal]');
 
 
+
+
+//-------------------------------------------------- Event listeners 
 navLinks.forEach(function(link) {
   link.addEventListener('click', scrollToSection);
 });
@@ -83,56 +141,10 @@ footerLinks.forEach(function(link) {
 });
 
 
-aboutSection.addEventListener('click',showImage);
-
-
-overlay.addEventListener('click', function(event) {
-  if (event.target === this) {
-    overlay.classList.remove(classes.opened);
-    document.body.style.overflow = '';
-  }
-});
+aboutSection.addEventListener('click',displayOverlayImage);
 
 
 
-
-
-//пробую реализовать 
-
-function openModal(e) {
-  e.preventDefault();
-
-  //set values from  the form
-  const city = document.getElementById('city').value;
-  const car = document.getElementById('car').value;
-  const pickUpDate = document.getElementById('startdate').value;
-  const pickUpTime = document.getElementById('starttime').value;
-  const endDate = document.getElementById('enddate').value;
-  const endTime = document.getElementById('endtime').value;
-
-  if(!city || !car || !pickUpDate || !pickUpTime || !endDate || !endTime) {
-    alert('Please fill in all fields.');
-    return;
-  }
-  //set values in the modal 
-  document.querySelector('[data-city]').value = city;
-  document.querySelector('[data-car]').value = car;
-  document.querySelector('[data-startdate]').value = pickUpDate;
-  document.querySelector('[data-starttime]').value = pickUpTime;
-  document.querySelector('[data-enddate]').value = endDate;
-  document.querySelector('[data-endtime]').value = endTime;
-
-  modal.classList.add(classes.opened);
-  overlay.classList.add(classes.opened);
-
-}
-
-const openModalBtn = document.querySelector('[data-openmodal]');
-
-
-openModalBtn.addEventListener('click', openModal);
-
-/* 
-
-
-*/
+overlay.addEventListener('click', closeOverlay);
+modal.addEventListener('click', closeModal);
+openModalBtn.addEventListener('click', openReservationModal);

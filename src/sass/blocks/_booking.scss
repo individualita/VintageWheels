@@ -1,5 +1,12 @@
 .booking {
     padding: 30px 0 30px 0;
+    &__error {
+        display: none;
+        text-align: center;
+        color: var(--button-color-primary);
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
     &__form {
         display: flex;
         flex-direction: column;
