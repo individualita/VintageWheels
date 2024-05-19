@@ -55,6 +55,7 @@ const aboutImages = document.querySelectorAll('[data-image-overlay]');
 const overlay = document.querySelector('.overlay');
 const overlayImage = document.querySelector('.overlay-img');
 
+
 navLinks.forEach(function(link) {
   link.addEventListener('click', scrollToSection);
 });
@@ -90,6 +91,7 @@ overlay.addEventListener('click', function(event) {
     document.body.style.overflow = '';
   }
 });
+
 
 
 
