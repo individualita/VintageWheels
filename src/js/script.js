@@ -48,7 +48,7 @@ function showImage (e) {
 
   if (currentTarget.hasAttribute('data-image-overlay')) {
     overlayImage.src = currentTarget.src;
-    overlay.style.display ='flex';
+    overlay.classList.add(classes.opened);
     //убираем пролистывание страницы
     document.body.style.overflow = 'hidden';
   }
@@ -88,7 +88,7 @@ aboutSection.addEventListener('click',showImage);
 
 overlay.addEventListener('click', function(event) {
   if (event.target === this) {
-    overlay.style.display = 'none';
+    overlay.classList.remove(classes.opened);
     document.body.style.overflow = '';
   }
 });
@@ -97,3 +97,42 @@ overlay.addEventListener('click', function(event) {
 
 
 
+//пробую реализовать 
+
+function openModal(e) {
+  e.preventDefault();
+
+  //set values from  the form
+  const city = document.getElementById('city').value;
+  const car = document.getElementById('car').value;
+  const pickUpDate = document.getElementById('startdate').value;
+  const pickUpTime = document.getElementById('starttime').value;
+  const endDate = document.getElementById('enddate').value;
+  const endTime = document.getElementById('endtime').value;
+
+  if(!city || !car || !pickUpDate || !pickUpTime || !endDate || !endTime) {
+    alert('Please fill in all fields.');
+    return;
+  }
+  //set values in the modal 
+  document.querySelector('[data-city]').value = city;
+  document.querySelector('[data-car]').value = car;
+  document.querySelector('[data-startdate]').value = pickUpDate;
+  document.querySelector('[data-starttime]').value = pickUpTime;
+  document.querySelector('[data-enddate]').value = endDate;
+  document.querySelector('[data-endtime]').value = endTime;
+
+  modal.classList.add(classes.opened);
+  overlay.classList.add(classes.opened);
+
+}
+
+const openModalBtn = document.querySelector('[data-openmodal]');
+
+
+openModalBtn.addEventListener('click', openModal);
+
+/* 
+
+
+*/
