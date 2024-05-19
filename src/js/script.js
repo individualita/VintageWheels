@@ -14,9 +14,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-const classes = {
-  opened: 'opened',
-};
 
 
 function scrollToSection(e) {
@@ -45,6 +42,22 @@ function toggleAccordeon() {
   }
 }
 
+function showImage (e) {
+
+  const currentTarget = e.target;
+
+  if (currentTarget.hasAttribute('data-image-overlay')) {
+    overlayImage.src = currentTarget.src;
+    overlay.style.display ='flex';
+    //убираем пролистывание страницы
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+const classes = {
+  opened: 'opened',
+};
+
 
 const navLinks = document.querySelectorAll('.nav__link');
 const collectionItem = document.querySelectorAll('.collection__item');
@@ -54,6 +67,7 @@ const aboutImages = document.querySelectorAll('[data-image-overlay]');
 
 const overlay = document.querySelector('.overlay');
 const overlayImage = document.querySelector('.overlay-img');
+const modal = overlay.querySelector('.modal');
 
 
 navLinks.forEach(function(link) {
@@ -69,20 +83,7 @@ footerLinks.forEach(function(link) {
 });
 
 
-
-
-
-aboutSection.addEventListener('click', function(e) {
-  const currentTarget = e.target;
-
-  if (currentTarget.hasAttribute('data-image-overlay')) {
-    overlayImage.src = currentTarget.src;
-    overlay.style.display ='flex';
-    //убираем пролистывание страницы
-    document.body.style.overflow = 'hidden';
-  }
-});
-
+aboutSection.addEventListener('click',showImage);
 
 
 overlay.addEventListener('click', function(event) {
