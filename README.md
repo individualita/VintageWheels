@@ -32,3 +32,5 @@ ENG. Build for production:
 Собрать версию для публикации:
 ```
 gulp docs
+
+[Watch demo](https://individualita.github.io/VintageWheels/)
