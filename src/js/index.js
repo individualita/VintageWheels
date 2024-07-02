@@ -1,4 +1,4 @@
-import  {swiper}  from "./modules/swiper";
+import  {swiper}  from "./modules/swiper"; 
   
 
   

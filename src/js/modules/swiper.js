@@ -1,5 +1,6 @@
  //swiper slider
 
+ 
 const swiper = new Swiper('.swiper', {
 	loop: true,
 	slidesPerView: "1.5",
@@ -14,4 +15,4 @@ const swiper = new Swiper('.swiper', {
 	  },
 });
 
-export {swiper};
+export {swiper}; 
