@@ -17,7 +17,6 @@ The project utilizes the following technologies:
 ## Project Status
 
 The project is still in development. Currently, it does not have responsive design, so it may not display correctly on all devices.
-
 ENG. Install dependencies:
 Установить зависимости:
 ```
@@ -32,5 +31,6 @@ ENG. Build for production:
 Собрать версию для публикации:
 ```
 gulp docs
+```
 
 [Watch demo](https://individualita.github.io/VintageWheels/)
