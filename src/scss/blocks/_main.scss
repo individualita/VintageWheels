@@ -1,0 +1,46 @@
+.main {
+    min-height: 670px;
+    background: url('./../../img/main/backgroundimage.png') no-repeat center / cover;
+    padding-bottom: 80px;
+    
+    &__wrapper {
+        height: 670px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 30px;
+        @include mobile {
+            height: 100vh;
+        }
+        
+        
+    }
+    &__title {   
+        font-size: 60px;
+        font-style: italic;
+        z-index: 1;
+        @include mobile {
+            font-size: 45px;
+        }
+        @include small-mobile {
+            font-size: 30px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 74px;
+            background: linear-gradient(90deg, rgba(255,249,231,0.7987570028011204) 0%, rgba(255,249,231,0.5718662464985995) 44%, rgba(255,249,231,0) 100%);
+            opacity: 0.8;
+            z-index: -1;
+            @include mobile {
+                height: 60px;
+            }
+            @include small-mobile {
+                height: 40px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vintage Wheels</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+
+		<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="container">
+				<nav class="nav">
+					<a href="#!" class="nav__logo">
+						<svg class="icon icon--logo">
+							<use href="./img/svgsprite/sprite.symbol.svg#logo"></use>
+						</svg>
+					</a>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a class="nav__link" href="#about" aria-label="Scroll to about section">About us</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#collection" aria-label="Scroll to collection section">Our collection</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#gallery" aria-label="Scroll to gallery section">Gallery</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#contact" aria-label="Scroll to contact section">Contact</a>
+						</li>
+					</ul>
+					<div class="nav__btns">
+						<button class="nav__btn" type="button" aria-label="The button to navigate to the account page.">
+							<svg class="icon icon--account-circle">
+								<use href="./img/svgsprite/sprite.symbol.svg#account-circle"></use>
+							</svg>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<section class="main" id="main">
+			<div class="container">
+				<div class="main__wrapper">
+					<h1 class="main__title">Old Money Cars You&#8217;ll love</h1>
+					<button class="button button-main" type="button" aria-label="Scroll to choose car section">Choose car</button>
+				</div>
+			</div>
+		</section>
+		<section class="about" id="about">
+			<div class="container">
+				<div class="about__content">
+					<div class="about__description">
+						<h2 class="title title-italic about__title">Vintage Wheels</h2>
+						<p class="about__text">
+							If&#160;you appreciate classic cars, you know that old money cars are the epitome of&#160;luxury and style. These cars are not just vehicles but works
+							of&#160;art representing a&#160;bygone era of&#160;elegance and sophistication. With their timeless designs and impeccable craftsmanship, old money cars
+							are the ultimate status symbol for those who appreciate the finer things in&#160;life.
+						</p>
+						<p class="about__text">
+							Step back in&#160;time with our exquisite collection of&#160;retro car rentals. Whether it&#8217;s for a&#160;special occasion, photo shoot,
+							or&#160;simply a&#160;desire to&#160;turn heads, our retro cars are sure to&#160;make memories that last a&#160;lifetime.
+						</p>
+					</div>
+					<div class="about__images">
+						<img class="about__image" data-image-overlay src="./img/about/aboutsalon.jfif" alt="Black car depicted with a steering wheel and old interior" />
+						<img class="about__image" data-image-overlay src="./img/about/aboutmoskvich.jfif" alt="Black car depicted with a steering wheel and old interior" />
+					</div>
+				</div>
+				<div class="about__grid">
+					<img class="about__grid-img" data-image-overlay src="./img/about/aboutservice.jfif" alt="The car is lifted by a crane at the service center" />
+					<img class="about__grid-img" data-image-overlay src="./img/about/aboutinside.jfif" alt="A blue car with a leather interior" />
+					<img class="about__grid-img" data-image-overlay src="./img/about/aboutwheel.jfif" alt="A black car with retro wheels." />
+				</div>
+			</div>
+		</section>
+		<section class="booking" id="booking">
+			<div class="container">
+				<div class="booking__error">*Please fill in&#160;all fields.</div>
+				<form class="booking__form" aria-label="booking form">
+					<div class="booking__form-group">
+						<div class="booking__input-group">
+							<label for="city" class="booking__label">Choose city:</label>
+							<select id="city" class="booking__select" name="city" aria-label="city choose">
+								<!-- Варианты городов -->
+								<option value="city1">Warsaw</option>
+								<option value="city2">Gdańsk</option>
+								<option value="city3">Wrocław</option>
+								<option value="city4">Krak&#243;w</option>
+							</select>
+						</div>
+
+						<div class="booking__input-group">
+							<label for="car" class="booking__label">Choose car:</label>
+							<select id="car" name="car" class="booking__select" aria-label="car choose">
+								<!-- Варианты машин -->
+								<option value="car1">Volga GAZ-21</option>
+								<option value="car2">Volga Pobeda M20</option>
+								<option value="car3">Moskvich 407</option>
+							</select>
+						</div>
+					</div>
+					<div class="booking__form-group">
+						<div class="booking__input-group">
+							<label for="startate" class="booking__label">Pick up&#160;date:</label>
+							<input class="booking__input" type="date" id="startdate" name="startdate" aria-label="select start date of rental" />
+						</div>
+
+						<div class="booking__input-group">
+							<label for="starttime" class="booking__label">Pick up&#160;time</label>
+							<input class="booking__input" type="time" id="starttime" name="starttime" aria-label="select start time of rental" />
+						</div>
+
+						<div class="booking__input-group">
+							<label for="enddate" class="booking__label">End date:</label>
+							<input class="booking__input" type="date" id="enddate" name="enddate" aria-label="select end date of rental" />
+						</div>
+
+						<div class="booking__input-group">
+							<label for="endtime" class="booking__label">End time:</label>
+							<input class="booking__input" type="time" id="endtime" name="endtime" aria-label="select end time of rental" />
+						</div>
+
+						<button class="button booking__button" data-openmodal type="button" aria-label="accept choose">Choose</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="collection" id="collection">
+			<div class="container">
+				<h2 class="title collection__title">Our collection</h2>
+				<div class="collection__wrapper">
+					<ul class="collection__list">
+						<li class="collection__item">
+							<div class="collection__header">
+								<div class="collection__brand">Volga GAZ-21</div>
+								<p class="collection__description">
+									The Volga GAZ-21 epitomizes the golden age of&#160;Soviet automotive engineering, with its iconic design and robust construction. Renowned for its
+									reliability and spacious interior, the GAZ-21 remains a&#160;symbol of&#160;prestige and luxury.
+								</p>
+								<button class="button button-small collection__button" type="button" aria-label="The button to open modal window.">Ride now</button>
+							</div>
+							<div class="collection__content">
+								<picture>
+									<source srcset="./img/collection/gaz21.webp 1x, ./img/collection/gaz21@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/collection/gaz21.png 1x, ./img/collection/gaz21@2x.png 2x" type="image/png" />
+									<img class="collection__image" src="./img/collection/gaz21.png" alt="Vintage Volga on a transparent background." />
+								</picture>
+								<div class="collection__footer">
+									<div class="collection__characteristics">
+										<div class="collection__characteristics-label">
+											Year of&#160;production
+											<span class="collection__characteristics-value">
+												1956
+											</span>
+										</div>
+										<div class="collection__characteristics-label">
+											Top speed
+											<span class="collection__characteristics-value">
+												145 km/h
+											</span>
+										</div>
+										<div class="collection__characteristics-label">
+											Power
+											<span class="collection__characteristics-value">
+												70 HP
+											</span>
+										</div>
+									</div>
+									<div class="collection__characteristics-price">
+										Price
+										<span class="collection__characteristics-value">
+											$45/h
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="collection__item">
+							<div class="collection__header">
+								<div class="collection__brand">Volga Pobeda M20</div>
+								<p class="collection__description">
+									The Volga Pobeda M20 stands as&#160;a&#160;testament to&#160;post-war Soviet automotive ingenuity, characterized by&#160;its distinctive retro
+									styling and durable engineering. With its spacious cabin and reliable performance, the M20 exudes a&#160;timeless charm, reflecting an&#160;era
+									of&#160;resilience and innovation.
+								</p>
+								<button class="button button-small collection__button" type="button" aria-label="The button to open modal window.">Ride now</button>
+							</div>
+							<div class="collection__content">
+								<picture>
+									<source srcset="./img/collection/gazm20.webp 1x, ./img/collection/gazm20@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/collection/gazm20.png 1x, ./img/collection/gazm20@2x.png 2x" type="image/png" />
+									<img class="collection__image" src="./img/collection/gazm20.png" alt="Vintage Volga Pobeda on a transparent background." />
+								</picture>
+								<div class="collection__footer">
+									<div class="collection__characteristics">
+										<div class="collection__characteristics-label">
+											Year of&#160;production
+											<span class="collection__characteristics-value">
+												1946
+											</span>
+										</div>
+										<div class="collection__characteristics-label">
+											Top speed
+											<span class="collection__characteristics-value">
+												90 km/h
+											</span>
+										</div>
+										<div class="collection__characteristics-label">
+											Power
+											<span class="collection__characteristics-value">
+												50 HP
+											</span>
+										</div>
+									</div>
+									<div class="collection__characteristics-price">
+										Price
+										<span class="collection__characteristics-value">
+											$47/h
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="collection__item opened">
+							<div class="collection__header">
+								<div class="collection__brand">Moskvich 407</div>
+								<p class="collection__description">
+									The Moskvich limousine exudes vintage charm with its sleek design and spacious interior, offering a&#160;luxurious ride reminiscent
+									of&#160;a&#160;bygone&#160;era. Its distinctive features and classic allure make it&#160;a&#160;timeless symbol of&#160;automotive elegance.
+								</p>
+								<button class="button button-small collection__button" type="button" aria-label="The button to open modal window.">Ride now</button>
+							</div>
+							<div class="collection__content">
+								<picture>
+									<source srcset="./img/collection/moskvich-407.webp 1x, ./img/collection/moskvich-407@2x.webp 2x" type="image/webp" />
+									<source srcset="./img/collection/moskvich-407.png 1x, ./img/collection/moskvich-407@2x.png 2x" type="image/png" />
+									<img class="collection__image" src="./img/collection/moskvich-407.png" alt="Vintage Moskvich on a transparent background." />
+								</picture>
+								<div class="collection__footer">
+									<div class="collection__characteristics">
+										<div class="collection__characteristics-label">
+											Year of&#160;production
+											<span class="collection__characteristics-value">
+												1958
+											</span>
+										</div>
+										<div class="collection__characteristics-label">
+											Top speed
+											<span class="collection__characteristics-value">
+												115 km/h
+											</span>
+										</div>
+										<div class="collection__characteristics-label">
+											Power
+											<span class="collection__characteristics-value">
+												45 HP
+											</span>
+										</div>
+									</div>
+									<div class="collection__characteristics-price">
+										Price
+										<span class="collection__characteristics-value">
+											$50/h
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="price" id="price">
+			<div class="container">
+				<div class="price__wrapper">
+					<h3 class="price__title">Special price for the first rental <span class="price__subtitle">-5%</span></h3>
+					<form class="price__form" action="#">
+						<input class="price__email" type="email" placeholder="name@email.com" />
+						<button class="price__button" type="submit">join</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="gallery" id="gallery">
+			<div class="title gallery__title">Gallery</div>
+			<div class="swiper">
+				<div class="swiper-wrapper gallery__wrapper">
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="./img/gallery/gallery01.webp 1x, ./img/gallery/gallery01@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/gallery/gallery01.png 1x, ./img/gallery/gallery01@2x.png 2x" type="image/png" />
+							<img class="gallery__image" src="./img/gallery/gallery01.png" alt="A close-up of a yellow vintage car against a backdrop of leaves." />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="./img/gallery/dwojka.webp 1x, ./img/gallery/dwojka@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/gallery/dwojka.png 1x, ./img/gallery/dwojka@2x.png 2x" type="image/png" />
+							<img class="gallery__image" src="./img/gallery/dwojka.png" alt="A black vintage car against the backdrop of a house." />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="./img/gallery/gallerycar.webp 1x, ./img/gallery/gallerycar@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/gallery/gallerycar.png 1x, ./img/gallery/gallerycar@2x.png 2x" type="image/png" />
+							<img class="gallery__image" src="./img/gallery/gallerycar.png" alt="A beige vintage car in a field during autumn." />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="./img/gallery/6ka.webp 1x, ./img/gallery/6ka@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/gallery/6ka.png 1x, ./img/gallery/6ka@2x.png 2x" type="image/png" />
+							<img class="gallery__image" src="./img/gallery/6ka.png" alt="A yellow vintage car in a field, with flowers in the background." />
+						</picture>
+					</div>
+				</div>
+				<button class="gallery__btn gallery__btn-prev" type="button" aria-label="Previous Slide">
+					<svg class="icon icon--leftarrow" data-name="Left">
+						<use href="./img/svgsprite/sprite.symbol.svg#leftarrow"></use>
+					</svg>
+				</button>
+				<button class="gallery__btn gallery__btn-next" type="button" aria-label="Next Slide">
+					<svg class="icon icon--rightarrow" data-name="right">
+						<use href="./img/svgsprite/sprite.symbol.svg#rightarrow"></use>
+					</svg>
+				</button>
+			</div>
+		</section>
+		<section class="reviews" id="reviews">
+			<div class="container">
+				<h2 class="title reviews__title">Reviews</h2>
+				<div class="reviews__wrapper">
+					<div class="reviews__item">
+						<div class="reviews__rating">
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+						</div>
+						<div class="reviews__client">
+							<picture>
+								<source srcset="./img/reviews/userimg.webp 1x, ./img/reviews/userimg@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/reviews/userimg.png 1x, ./img/reviews/userimg@2x.png 2x" type="image/png" />
+								<img class="reviews__img" src="./img/reviews/userimg.png" alt="user image in circle background" />
+							</picture>
+							<div class="reviews__name">Kamil</div>
+						</div>
+						<p class="reviews__text">
+							&#171;Renting a&#160;retro car was the highlight of&#160;our trip! The vintage charm and smooth ride made our journey unforgettable. The rental process
+							was seamless, and the car was in&#160;pristine condition. Highly recommend for anyone looking to&#160;add a&#160;unique touch to&#160;their travel
+							experience.&#187;
+						</p>
+					</div>
+					<div class="reviews__item">
+						<div class="reviews__rating">
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+						</div>
+						<div class="reviews__client">
+							<picture>
+								<source srcset="./img/reviews/userimg.webp 1x, ./img/reviews/userimg@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/reviews/userimg.png 1x, ./img/reviews/userimg@2x.png 2x" type="image/png" />
+								<img class="reviews__img" src="./img/reviews/userimg.png" alt="user image in circle background" />
+							</picture>
+							<div class="reviews__name">Aleksandr</div>
+						</div>
+						<p class="reviews__text">
+							&#171;I&#160;rented a&#160;retro car for my&#160;wedding, and it&#160;was absolutely perfect! The classic elegance of&#160;the vehicle added a&#160;touch
+							of&#160;glamour to&#160;our special&#160;day. The rental company provided excellent service, ensuring the car was immaculate and ready
+							to&#160;go&#160;on&#160;time. It&#160;truly made our wedding day unforgettable.&#187;
+						</p>
+					</div>
+					<div class="reviews__item">
+						<div class="reviews__rating">
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star1">
+								<use href="./img/svgsprite/sprite.symbol.svg#star1"></use>
+							</svg>
+							<svg class="icon icon--star2">
+								<use href="./img/svgsprite/sprite.symbol.svg#star2"></use>
+							</svg>
+						</div>
+						<div class="reviews__client">
+							<picture>
+								<source srcset="./img/reviews/userimg.webp 1x, ./img/reviews/userimg@2x.webp 2x" type="image/webp" />
+								<source srcset="./img/reviews/userimg.png 1x, ./img/reviews/userimg@2x.png 2x" type="image/png" />
+								<img class="reviews__img" src="./img/reviews/userimg.png" alt="user image in circle background" />
+							</picture>
+							<div class="reviews__name">Olga</div>
+						</div>
+						<p class="reviews__text">
+							&#171;Renting a&#160;retro car was a&#160;dream come true for&#160;me. As&#160;a&#160;vintage car enthusiast, driving a&#160;beautifully restored classic
+							was an&#160;incredible experience. The rental process was straightforward, and the staff were friendly and knowledgeable.&#187;
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__main">
+					<div class="footer__info">
+						<h3 class="footer__title">Vintage Wheels</h3>
+						<p class="footer__description">These cars are not just vehicles but works of&#160;art representing a&#160;bygone era of&#160;elegance and sophistication.</p>
+					</div>
+					<div class="footer__menu">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-title">Menu</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="#about" aria-label="Scroll to about section">About us</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="#collection" aria-label="Scroll to collection section">Our cars</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="#gallery" aria-label="Scroll to gallery section">Gallery</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="#" aria-label="Scroll to contact section">Contact</a>
+							</li>
+						</ul>
+						<ul class="footer__menu-list">
+							<li class="footer__menu-title">Company</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="#" aria-label="">FAQ</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="#" aria-label="">Privacy & Policies</a>
+							</li>
+							<li class="footer__menu-item">
+								<a class="footer__menu-link" href="#" aria-label="">Support</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__social">
+						<a class="footer__social-link" href="#" aria-label="link to instagram page">
+							<svg class="icon icon--instagram">
+								<use href="./img/svgsprite/sprite.symbol.svg#instagram"></use>
+							</svg>
+						</a>
+						<a class="footer__social-link" href="#" aria-label="link to telegram page">
+							<svg class="icon icon--telegram">
+								<use href="./img/svgsprite/sprite.symbol.svg#telegram"></use>
+							</svg>
+						</a>
+						<a class="footer__social-link" href="#" aria-label="link to facebook page">
+							<svg class="icon icon--facebook">
+								<use href="./img/svgsprite/sprite.symbol.svg#facebook"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="footer__copy">
+						Developed by&#160;<a href="https://github.com/individualita" target="_blank" aria-label="link to my github page">Roman K.</a>All rights reserved.
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="overlay">
+			<img src="" alt="Overlay Image" class="overlay-img" />
+		</div>
+		<div class="modal" id="reservation">
+			<span class="modal__close">&#215;</span>
+			<div class="modal__title">Finish Reservation</div>
+			<!-- Форма с информацией о бронировании -->
+			<form id="bookingForm" class="modal__form">
+				<!-- Поля, заполненные при бронировании -->
+				<div class="modal__form-group">
+					<div class="modal__input">
+						<label class="modal__label" for="city">City:</label>
+						<input class="modal__input-field" data-city type="text" id="city" name="city" />
+					</div>
+					<div class="modal__input">
+						<label class="modal__label" for="car">Car:</label>
+						<input class="modal__input-field" data-car type="text" id="car" name="car" />
+					</div>
+				</div>
+
+				<div class="modal__form-group">
+					<div class="modal__input">
+						<label class="modal__label" for="startDate">Pick up&#160;date</label>
+						<input class="modal__input-field" data-startdate type="date" id="startDate" name="startDate" />
+					</div>
+					<div class="modal__input">
+						<label class="modal__label" for="startTime">Pick up&#160;time</label>
+						<input class="modal__input-field" data-starttime type="time" id="startTime" name="startTime" />
+					</div>
+				</div>
+
+				<div class="modal__form-group">
+					<div class="modal__input">
+						<label class="modal__label" for="endDate">End date</label>
+						<input class="modal__input-field" data-enddate type="date" id="endDate" name="endDate" />
+					</div>
+					<div class="modal__input">
+						<label class="modal__label" for="endTime">End time</label>
+						<input class="modal__input-field" data-endtime type="time" id="endTime" name="endTime" />
+					</div>
+				</div>
+
+				<!-- Поля для персональной информации -->
+				<div class="modal__title">Personal Information</div>
+				<div class="modal__form-group">
+					<div class="modal__input">
+						<label class="modal__label" for="firstName">Name:</label>
+						<input class="modal__input-field" type="text" id="firstName" name="firstName" required />
+					</div>
+					<div class="modal__input">
+						<label class="modal__label" for="lastName">Surname:</label>
+						<input class="modal__input-field" type="text" id="lastName" name="lastName" required />
+					</div>
+				</div>
+
+				<div class="modal__form-group">
+					<div class="modal__input">
+						<label class="modal__label" for="phone">Phone number:</label>
+						<input class="modal__input-field" type="tel" id="phone" name="phone" required />
+					</div>
+					<div class="modal__input">
+						<label class="modal__label" for="email">Email:</label>
+						<input class="modal__input-field" type="email" id="email" name="email" required />
+					</div>
+				</div>
+
+				<div class="modal__form-group">
+					<div class="modal__input">
+						<label class="modal__label" for="age">Age:</label>
+						<input class="modal__input-field" type="number" id="age" name="age" required />
+					</div>
+					<div class="modal__input">
+						<label class="modal__label" for="clientType">Client type:</label>
+						<select class="modal__input-field" id="clientType" name="clientType" required>
+							<option value="individual">Individual</option>
+							<option value="company">Company</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Кнопка для отправки формы -->
+				<button class="modal__button" type="submit">Ride now</button>
+			</form>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__list {
+        display: flex;
+        gap: 55px;
+        @include mobile {
+            display: none;
+        }
+
+    }
+    &__link {
+        color: #000;
+        font-weight: 600;
+        &:hover {
+            color: var(--button-color-secondary);
+        }
+    }
+}

@@ -1,0 +1,81 @@
+<div class="modal" id="reservation">
+    <span class="modal__close">&times;</span>
+    <div class="modal__title">Finish Reservation</div>
+    <!-- Форма с информацией о бронировании -->
+    <form id="bookingForm" class="modal__form">
+    <!-- Поля, заполненные при бронировании -->
+        <div class="modal__form-group">
+            <div class="modal__input">
+                <label class="modal__label" for="city">City:</label>
+                <input class="modal__input-field" data-city type="text" id="city" name="city" >
+            </div>
+            <div class="modal__input">
+                <label class="modal__label" for="car">Car:</label>
+                <input class="modal__input-field" data-car type="text" id="car" name="car">
+            </div>
+        </div>
+
+        <div class="modal__form-group">
+            <div class="modal__input">
+                <label class="modal__label" for="startDate">Pick up date</label>
+                <input class="modal__input-field" data-startdate type="date" id="startDate" name="startDate">
+            </div>
+            <div class="modal__input">
+                <label class="modal__label" for="startTime">Pick up time</label>
+                <input class="modal__input-field" data-starttime type="time" id="startTime" name="startTime">
+            </div>
+        </div>
+
+        <div class="modal__form-group">
+            <div class="modal__input">
+                <label class="modal__label" for="endDate">End date</label>
+                <input class="modal__input-field" data-enddate type="date" id="endDate" name="endDate">
+            </div>
+            <div class="modal__input">
+                <label class="modal__label" for="endTime">End time</label>
+                <input class="modal__input-field" data-endtime type="time" id="endTime" name="endTime">
+            </div>
+        </div>
+
+    <!-- Поля для персональной информации -->
+        <div class="modal__title">Personal Information</div>
+        <div class="modal__form-group">
+            <div class="modal__input">
+                <label class="modal__label" for="firstName">Name:</label>
+                <input class="modal__input-field" type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="modal__input">
+                <label class="modal__label" for="lastName">Surname:</label>
+                <input class="modal__input-field" type="text" id="lastName" name="lastName" required>
+            </div>
+        </div>
+
+        <div class="modal__form-group">
+            <div class="modal__input">
+                <label class="modal__label" for="phone">Phone number:</label>
+                <input class="modal__input-field" type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="modal__input">
+                <label class="modal__label" for="email">Email:</label>
+                <input class="modal__input-field" type="email" id="email" name="email" required>
+            </div>
+        </div>
+
+        <div class="modal__form-group">
+            <div class="modal__input">
+                <label class="modal__label" for="age">Age:</label>
+                <input class="modal__input-field" type="number" id="age" name="age" required>
+            </div>
+            <div class="modal__input">
+                <label class="modal__label" for="clientType">Client type:</label>
+                <select class="modal__input-field" id="clientType" name="clientType" required>
+                    <option value="individual">Individual</option>
+                    <option value="company">Company</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Кнопка для отправки формы -->
+        <button class="modal__button" type="submit">Ride now</button>
+    </form>
+</div>

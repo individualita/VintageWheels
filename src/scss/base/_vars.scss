@@ -1,0 +1,28 @@
+:root {
+	--container-width: 1130px;
+	--container-padding: 15px;
+
+    //fonts 
+    --font-main: 'Cormorant', serif;
+	//--font-accent: 'Poppins', sans-serif;
+	--font-nav: 'Open Sans', sans-serif;
+
+
+	//colors 
+    --first-color: #FFF9E7;
+    --second-color: #CDBA9E;
+    --button-color-primary: #A73B22;
+    --button-color-secondary: #434B34;
+    --button-color-transparent: transparent;
+
+
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}
+
+.dark {
+    --page-bg: #252526;
+    --text-color: #fff;
+}
