@@ -1,4 +1,3 @@
-
 # Vintage Wheels
 
 Welcome to the **Vintage Wheels** project! This project is currently a work in progress and has not yet been fully adapted for all devices.
@@ -33,6 +32,3 @@ ENG. Build for production:
 Собрать версию для публикации:
 ```
 gulp docs
-
-
-![Project Image](https://github.com/individualita/VintageWheels/src/img/images/collection/gaz21.png)
