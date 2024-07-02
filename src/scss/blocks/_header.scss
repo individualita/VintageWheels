@@ -8,5 +8,8 @@
     background: rgba(255,249,231,0.6);
     backdrop-filter: blur(10px);
     font-family: var(--font-nav);
+    @include mobile {
+        padding: 15px 0;
+    }
 
 }

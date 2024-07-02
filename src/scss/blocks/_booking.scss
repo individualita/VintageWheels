@@ -11,16 +11,32 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
+        @include mobile {
+            gap: 15px;
+            
+        }
         &-group {
             display: flex;
             align-items: center;
             gap: 20px;
+            @include small-tablet {
+                flex-wrap: wrap;
+            }
+            @include mobile {
+                justify-content: flex-end;
+                gap: 5px;
+            }
+
         }
     }
     &__input {
         &-group {
             width: 200px;
             margin-bottom: 20px;
+            @include small-tablet {
+                flex-grow: 1;
+                
+            }
             &:nth-child(1),
             &:nth-child(2) {
                 flex-grow: 1;
@@ -33,6 +49,9 @@
         color: #000;
         font-weight: 600;
         font-size: 20px;
+        @include small-mobile {
+            font-size: 18px;
+        }
     }
     &__select,
     &__input {
@@ -43,6 +62,9 @@
         border: 2px solid var(--second-color);
         border-radius: 4px;
         cursor: pointer;
+        @include small-mobile {
+            font-size: 14px;
+        }
     }
     &__button {
         background: var(--button-color-primary);

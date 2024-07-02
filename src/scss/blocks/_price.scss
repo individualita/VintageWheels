@@ -9,6 +9,10 @@
     }
     &__title {
         font-size: 32px;
+        @include small-mobile {
+            text-align: center;
+            font-size: 28px;
+        }
     }
     &__subtitle {
         display: block;

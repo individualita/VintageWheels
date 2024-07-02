@@ -18,6 +18,9 @@
         background-color: var(--second-color);
         will-change: height;
         transition: all 1s;
+        @include mobile {
+            padding: 10px 15px;
+        }
         &.opened {
             background-color: transparent;
             .collection__content {
@@ -37,14 +40,36 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        @include mobile {
+            flex-direction: column;
+            gap: 25px;
+            align-items: flex-start;
+        }
+    }
+    &__button {
+        @include mobile {
+            align-self: flex-end;
+        }
     }
     &__brand {
         font-size: 24px;
         font-weight: 600;
+        @include small-tablet {
+            font-size: 22px;
+        }
     }
     &__description {
         width: 640px;
         font-weight: 500;
+        @include tablet {
+            width: 480px;
+        }
+        @include small-tablet {
+            width: 400px;
+        }
+        @include mobile {
+            width: 100%;
+        }
     }
     &__content {
         overflow: hidden;
@@ -56,6 +81,19 @@
         width: 670px;
         height: 450px;
         margin-left: auto;
+        @include tablet {
+            width: 595px;
+            height: 400px;
+        }
+        @include mobile {
+            width: 380px;
+            height: 265px;
+            margin-top: 20px;
+        }
+        @include small-mobile {
+            width: 300px;
+            height: 180px;
+        }
     }
     &__footer {
         display: flex;
@@ -64,6 +102,12 @@
     &__characteristics {
         display: flex;
         gap: 60px;
+        @include mobile {
+            gap: 10px;
+        }
+        @include small-mobile {
+            gap: 5px;
+        }
         &-label,
         &-price {
             display: flex;
@@ -71,9 +115,23 @@
             align-items: center;
             font-size: 20px;
             font-weight: 500;
+            @include small-tablet {
+                font-size: 18px;
+            }
+            @include mobile {
+                text-align: center;
+                font-size: 16px;
+                gap: 15px;
+                min-height: 60px;
+            }
+            
+
         }
         &-value {
             font-size: 24px;
+            @include small-mobile {
+                font-size: 20px;
+            }
         }
     }
 }
