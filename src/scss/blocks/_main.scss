@@ -24,8 +24,14 @@
         font-size: 60px;
         font-style: italic;
         z-index: 1;
+        @include laptop {
+            font-size: 56px;
+        }
+        @include tablet {
+            font-size: 50px;
+        }
         @include mobile {
-            font-size: 45px;
+            font-size: 42px;
         }
         @include small-mobile {
             font-size: 30px;
@@ -39,8 +45,11 @@
             background: linear-gradient(90deg, rgba(255,249,231,0.7987570028011204) 0%, rgba(255,249,231,0.5718662464985995) 44%, rgba(255,249,231,0) 100%);
             opacity: 0.8;
             z-index: -1;
+            @include tablet {
+                height: 66px;
+            }
             @include mobile {
-                height: 60px;
+                height: 56px;
             }
             @include small-mobile {
                 height: 40px;

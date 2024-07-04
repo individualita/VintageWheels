@@ -1,15 +1,17 @@
 .button {
-    padding: 5px;
-    width: 180px;
-    height: 50px;
+    padding: 10px;
+    width: 145px;
     background-color: var(--button-color-primary);
     border-radius: 5px;
-    font-size: 28px;
+    font-size: 24px;
     color: #fff;
     @include mobile {
+        width: 125px;
+        font-size: 20px;
+    }
+    @include small-mobile {
         width: 120px;
-        height: 40px;
-        font-size: 22px;
+        padding: 5px;
     }
     &-small {
         width: 90px;
