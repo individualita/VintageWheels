@@ -76,8 +76,9 @@
             column-gap: 15px;
         }
         @include mobile {
+            margin-top: 15px;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 15px;
         }
         @include small-mobile {
             grid-template-columns: 325px;
