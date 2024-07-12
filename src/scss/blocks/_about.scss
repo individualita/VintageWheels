@@ -1,10 +1,5 @@
 .about {
-    padding: 100px 0 100px;
-    &__title {
-        @include small-tablet {
-            text-align: center;
-        }
-    }
+    padding-top: 100px;
     &__content {
         display: flex;
         flex-wrap: wrap;

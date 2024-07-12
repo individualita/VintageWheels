@@ -23,25 +23,31 @@
 					</a>
 					<ul class="nav__list">
 						<li class="nav__item">
-							<a class="nav__link" href="#about" aria-label="Scroll to about section">About us</a>
+							<a class="nav__link" href="#about" aria-label="Scroll to about section">About </a>
 						</li>
 						<li class="nav__item">
-							<a class="nav__link" href="#collection" aria-label="Scroll to collection section">Our collection</a>
+							<a class="nav__link" href="#collection" aria-label="Scroll to collection section"> Collection</a>
 						</li>
 						<li class="nav__item">
 							<a class="nav__link" href="#gallery" aria-label="Scroll to gallery section">Gallery</a>
 						</li>
 						<li class="nav__item">
-							<a class="nav__link" href="#contact" aria-label="Scroll to contact section">Contact</a>
+							<a class="nav__link" href="#reviews" aria-label="Scroll to reviews section">Reviews</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link nav__link-contact" href="#contact" aria-label="Scroll to contact section">Contact</a>
 						</li>
 					</ul>
-					<div class="nav__btns">
-						<button class="nav__btn" type="button" aria-label="The button to navigate to the account page.">
-							<svg class="icon icon--account-circle">
-								<use href="./img/svgsprite/sprite.symbol.svg#account-circle"></use>
-							</svg>
-						</button>
-					</div>
+					<button class="nav__hamburger" type="button">
+						<span></span>
+					</button>
+					<!-- <div class="nav__btns">
+                <button class="nav__btn" type="button" aria-label="The button to navigate to the account page.">
+                    <svg class="icon icon--account-circle">
+                        <use href="./img/svgsprite/sprite.symbol.svg#account-circle"></use>
+                    </svg>
+                </button>
+            </div> -->
 				</nav>
 			</div>
 		</header>
@@ -50,33 +56,6 @@
 				<div class="main__wrapper">
 					<h1 class="main__title">Old Money Cars You&#8217;ll love</h1>
 					<button class="button main__button" type="button" aria-label="Scroll to choose car section">Choose car</button>
-				</div>
-			</div>
-		</section>
-		<section class="about" id="about">
-			<div class="container">
-				<h2 class="title about__title">Vintage Wheels</h2>
-				<div class="about__content">
-					<div class="about__description">
-						<p class="about__text">
-							If&#160;you appreciate classic cars, you know that old money cars are the epitome of&#160;luxury and style. These cars are not just vehicles but works
-							of&#160;art representing a&#160;bygone era of&#160;elegance and sophistication. With their timeless designs and impeccable craftsmanship, old money cars
-							are the ultimate status symbol for those who appreciate the finer things in&#160;life.
-						</p>
-						<p class="about__text">
-							Step back in&#160;time with our exquisite collection of&#160;retro car rentals. Whether it&#8217;s for a&#160;special occasion, photo shoot,
-							or&#160;simply a&#160;desire to&#160;turn heads, our retro cars are sure to&#160;make memories that last a&#160;lifetime.
-						</p>
-					</div>
-					<div class="about__images">
-						<img class="about__image" data-image-overlay src="./img/about/aboutsalon.jfif" alt="Black car depicted with a steering wheel and old interior" />
-						<img class="about__image" data-image-overlay src="./img/about/aboutmoskvich.jfif" alt="Black car depicted with a steering wheel and old interior" />
-					</div>
-				</div>
-				<div class="about__grid">
-					<img class="about__grid-img" data-image-overlay src="./img/about/aboutservice.jfif" alt="The car is lifted by a crane at the service center" />
-					<img class="about__grid-img" data-image-overlay src="./img/about/aboutinside.jfif" alt="A blue car with a leather interior" />
-					<img class="about__grid-img" data-image-overlay src="./img/about/aboutwheel.jfif" alt="A black car with retro wheels." />
 				</div>
 			</div>
 		</section>
@@ -127,9 +106,36 @@
 							<input class="booking__input" type="time" id="endtime" name="endtime" aria-label="select end time of rental" />
 						</div>
 
-						<button class="button booking__button" data-openmodal type="button" aria-label="accept choose">Choose</button>
+						<button class="button button-medium booking__button" data-openmodal type="button" aria-label="accept choose">Choose</button>
 					</div>
 				</form>
+			</div>
+		</section>
+		<section class="about" id="about">
+			<div class="container">
+				<h2 class="title about__title">Vintage Wheels</h2>
+				<div class="about__content">
+					<div class="about__description">
+						<p class="about__text">
+							If&#160;you appreciate classic cars, you know that old money cars are the epitome of&#160;luxury and style. These cars are not just vehicles but works
+							of&#160;art representing a&#160;bygone era of&#160;elegance and sophistication. With their timeless designs and impeccable craftsmanship, old money cars
+							are the ultimate status symbol for those who appreciate the finer things in&#160;life.
+						</p>
+						<p class="about__text">
+							Step back in&#160;time with our exquisite collection of&#160;retro car rentals. Whether it&#8217;s for a&#160;special occasion, photo shoot,
+							or&#160;simply a&#160;desire to&#160;turn heads, our retro cars are sure to&#160;make memories that last a&#160;lifetime.
+						</p>
+					</div>
+					<div class="about__images">
+						<img class="about__image" data-image-overlay src="./img/about/aboutsalon.jfif" alt="Black car depicted with a steering wheel and old interior" />
+						<img class="about__image" data-image-overlay src="./img/about/aboutmoskvich.jfif" alt="Black car depicted with a steering wheel and old interior" />
+					</div>
+				</div>
+				<div class="about__grid">
+					<img class="about__grid-img" data-image-overlay src="./img/about/aboutservice.jfif" alt="The car is lifted by a crane at the service center" />
+					<img class="about__grid-img" data-image-overlay src="./img/about/aboutinside.jfif" alt="A blue car with a leather interior" />
+					<img class="about__grid-img" data-image-overlay src="./img/about/aboutwheel.jfif" alt="A black car with retro wheels." />
+				</div>
 			</div>
 		</section>
 
@@ -281,7 +287,7 @@
 		<section class="price" id="price">
 			<div class="container">
 				<div class="price__wrapper">
-					<h3 class="price__title">Special price for the first rental <span class="price__subtitle">-5%</span></h3>
+					<h3 class="title price__title">Special price for the first rental <span class="price__subtitle">-5%</span></h3>
 					<form class="price__form" action="#">
 						<input class="price__email" type="email" placeholder="name@email.com" />
 						<button class="price__button" type="submit">join</button>
@@ -302,13 +308,6 @@
 					</div>
 					<div class="swiper-slide">
 						<picture>
-							<source srcset="./img/gallery/dwojka.webp 1x, ./img/gallery/dwojka@2x.webp 2x" type="image/webp" />
-							<source srcset="./img/gallery/dwojka.png 1x, ./img/gallery/dwojka@2x.png 2x" type="image/png" />
-							<img class="gallery__image" src="./img/gallery/dwojka.png" alt="A black vintage car against the backdrop of a house." />
-						</picture>
-					</div>
-					<div class="swiper-slide">
-						<picture>
 							<source srcset="./img/gallery/gallerycar.webp 1x, ./img/gallery/gallerycar@2x.webp 2x" type="image/webp" />
 							<source srcset="./img/gallery/gallerycar.png 1x, ./img/gallery/gallerycar@2x.png 2x" type="image/png" />
 							<img class="gallery__image" src="./img/gallery/gallerycar.png" alt="A beige vintage car in a field during autumn." />
@@ -319,6 +318,28 @@
 							<source srcset="./img/gallery/6ka.webp 1x, ./img/gallery/6ka@2x.webp 2x" type="image/webp" />
 							<source srcset="./img/gallery/6ka.png 1x, ./img/gallery/6ka@2x.png 2x" type="image/png" />
 							<img class="gallery__image" src="./img/gallery/6ka.png" alt="A yellow vintage car in a field, with flowers in the background." />
+						</picture>
+					</div>
+
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="./img/gallery/pobeda.webp 1x, ./img/gallery/pobeda@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/gallery/pobeda.png 1x, ./img/gallery/pobeda@2x.png 2x" type="image/png" />
+							<img class="gallery__image" src="./img/gallery/pobeda.png" alt="" />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="./img/gallery/galleryinterier.webp 1x, ./img/gallery/galleryinterier@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/gallery/galleryinterier.png 1x, ./img/gallery/galleryinterier@2x.png 2x" type="image/png" />
+							<img class="gallery__image" src="./img/gallery/galleryinterier.png" alt="" />
+						</picture>
+					</div>
+					<div class="swiper-slide">
+						<picture>
+							<source srcset="./img/gallery/gallerywheel2.webp 1x, ./img/gallery/gallerywheel2@2x.webp 2x" type="image/webp" />
+							<source srcset="./img/gallery/gallerywheel2.png 1x, ./img/gallery/gallerywheel2@2x.png 2x" type="image/png" />
+							<img class="gallery__image" src="./img/gallery/gallerywheel2.png" alt="" />
 						</picture>
 					</div>
 				</div>
@@ -472,17 +493,17 @@
 				</div>
 				<div class="footer__bottom">
 					<div class="footer__social">
-						<a class="footer__social-link" href="#" aria-label="link to instagram page">
+						<a class="footer__social-link" href="#!" aria-label="link to instagram page">
 							<svg class="icon icon--instagram">
 								<use href="./img/svgsprite/sprite.symbol.svg#instagram"></use>
 							</svg>
 						</a>
-						<a class="footer__social-link" href="#" aria-label="link to telegram page">
+						<a class="footer__social-link" href="#!" aria-label="link to telegram page">
 							<svg class="icon icon--telegram">
 								<use href="./img/svgsprite/sprite.symbol.svg#telegram"></use>
 							</svg>
 						</a>
-						<a class="footer__social-link" href="#" aria-label="link to facebook page">
+						<a class="footer__social-link" href="#!" aria-label="link to facebook page">
 							<svg class="icon icon--facebook">
 								<use href="./img/svgsprite/sprite.symbol.svg#facebook"></use>
 							</svg>

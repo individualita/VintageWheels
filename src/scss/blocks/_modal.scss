@@ -13,6 +13,12 @@
     z-index: 9999;
     overflow-x: hidden;
     overflow-y: scroll;
+    @include small-tablet {
+        width: 600px;
+    }
+    @include mobile {
+        width: 80%;
+    }
     &.opened {
         display: block;
     }
@@ -22,16 +28,19 @@
         right: 10px;
         font-family: var(--font-nav);
         font-size: 50px;
-        color: var(--button-color-primary);
+        color: var(--base-color);
         cursor: pointer;
     }
     &__title {
         font-size: 24px;
         text-transform: uppercase;
-        color: var(--button-color-secondary);
+        color: var(--support-color);
         font-weight: 600;
         padding-bottom: 10px;
-        border-bottom: 1px solid var(--button-color-secondary);
+        border-bottom: 1px solid var(--support-color);
+        @include small-mobile {
+            font-size: 18px;
+        }
     }
     &__form {
         display: flex;
@@ -42,6 +51,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
+            @include mobile {
+                gap: 15px;
+            }
+            @include small-mobile {
+                gap: 10px;
+                grid-template-columns: 1fr;
+            }
         }
     }
     &__input {
@@ -49,6 +65,9 @@
         flex-direction: column;
         gap: 4px;
         font-size: 18px;
+        @include mobile {
+            font-size: 16px;
+        }
         &-field {
             width: 100%;
             padding: 8px;
@@ -67,7 +86,7 @@
     }
     &__button {
         padding: 10px 20px;
-        background-color: var(--button-color-secondary );
+        background-color: var(--support-color );
         color: #fff;
         font-size: 18px;
         border: none;

@@ -12,6 +12,11 @@
 .icon--logo {
 	width: 133px;
 	height: 42px;
+	fill: #6c402e;
+	transition: 0.6s all ease;
+	&:hover {
+		transform: scale(0.95);
+	}
 	@include mobile {
 		width: 100px;
 	}
