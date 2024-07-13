@@ -42,8 +42,14 @@
         color: var(--nav-links-color);
         font-weight: 600;
         transition: 0.6s all ease;
-        &:hover {
+        &-active {
             color: var(--second-color);
+            @include mobile {
+                color: var(--nav-links-color);
+            }
+        }
+        &:hover {
+            color: var(--base-color);
         }
         @include mobile {
             display: block;

@@ -19,7 +19,7 @@
     @include mobile {
         width: 80%;
     }
-    &.opened {
+    &__opened {
         display: block;
     }
     &__close {

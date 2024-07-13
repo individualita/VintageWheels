@@ -18,21 +18,21 @@
         background-color: var(--second-color);
         will-change: height;
         transition: all 1s;
-        @include mobile {
-            padding: 10px 15px;
-        }
-        &.opened {
-            background-color: transparent;
-            .collection__content {
-                opacity: 1;
-                max-height: 650px;
-            }
+        &-opened {
+            background-color:var(--first-color);
             .collection__button {
                 color: #000;
                 font-weight: 600;
                 border: 1px solid var(--second-color);
                 background-color: transparent;
             }
+            .collection__content {
+                opacity: 1;
+                max-height: 650px;
+            }
+        }
+        @include mobile {
+            padding: 10px 15px;
         }
     }
     &__header {
@@ -80,7 +80,7 @@
     &__content {
         overflow: hidden;
         opacity: 0;
-        transition: all 1s;
+        transition: opacity 0.5s, max-height 0.5s;
         max-height: 0;
     }
     &__image {
