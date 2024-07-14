@@ -23,10 +23,10 @@
             z-index: 4;
             background-color: var(--second-color);
             opacity: 0;
-        }
-        &-mobile {
-            transform: translateX(0);
-            opacity: 1;
+            &-mobile {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
     }
